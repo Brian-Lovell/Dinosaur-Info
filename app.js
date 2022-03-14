@@ -30,3 +30,15 @@
 
 
 // On button click, prepare and display infographic
+
+window.addEventListener('DOMContentLoaded', (e) => {
+    //Get form element
+    const form = document.getElementById('dino-compare');
+    //Add submit event listener on form
+    form.addEventListener('submit', handleSubmit);
+});
+
+function handleSubmit(event) {
+    event.preventDefault();
+    console.log("I'm alive!");
+}
