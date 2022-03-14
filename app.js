@@ -111,10 +111,6 @@ const dinoJson =
         }
     ]
 }
-
-
-//We are making dinosaurs
-
 console.log(dinoJson);
 
 //Get form element
@@ -137,3 +133,13 @@ formElem.addEventListener('formdata', (e) => {
     }
 });
 
+//We are making dinosaurs
+function Dinosaur(array) {
+    return {
+        array,
+    };
+}
+
+const dino1 = Dinosaur(dinoJson);
+
+console.log(dino1);
