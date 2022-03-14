@@ -31,23 +31,26 @@
 
 // On button click, prepare and display infographic
 
-window.addEventListener('DOMContentLoaded', (e) => {
-    //Get form element
-    const formElem = document.getElementById('dino-compare');
-    //Add submit event listener on form
-    formElem.addEventListener('submit', handleSubmit);
+//  My code -
+
+
+//Get form element
+const formElem = document.getElementById('dino-compare');
+
+//Create obj from from
+formElem.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("I'm alive! - formElem fired");
+
+    new FormData(formElem);
 });
 
-function handleSubmit(event) {
-    event.preventDefault();
-    console.log("I'm alive! - handleSubmit Function");
+formElem.addEventListener('formdata', (e) => {
+    console.log('Hello there! - formdata fired');
 
+    let data = e.formData;
+    for (var value of data.values()) {
+        console.log(value);
+    }
+})
 
-}
-
-// Factory Function to create Human Object
-function Human(name) {
-    return {
-        name : name
-    };
-}
