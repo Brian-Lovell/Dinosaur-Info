@@ -40,5 +40,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 function handleSubmit(event) {
     event.preventDefault();
-    console.log("I'm alive!");
+    console.log("I'm alive! - handleSubmit Function");
+
+}
+
+// Factory Function to create Human Object
+function Human(name) {
+    return {
+        name : name
+    };
 }
