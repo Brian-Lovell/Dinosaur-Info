@@ -33,14 +33,15 @@
 
 window.addEventListener('DOMContentLoaded', (e) => {
     //Get form element
-    const form = document.getElementById('dino-compare');
+    const formElem = document.getElementById('dino-compare');
     //Add submit event listener on form
-    form.addEventListener('submit', handleSubmit);
+    formElem.addEventListener('submit', handleSubmit);
 });
 
 function handleSubmit(event) {
     event.preventDefault();
     console.log("I'm alive! - handleSubmit Function");
+
 
 }
 
