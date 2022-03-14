@@ -52,5 +52,5 @@ formElem.addEventListener('formdata', (e) => {
     for (var value of data.values()) {
         console.log(value);
     }
-})
+});
 
