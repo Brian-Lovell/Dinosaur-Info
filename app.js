@@ -111,35 +111,52 @@ const dinoJson =
         }
     ]
 }
-console.log(dinoJson);
+// console.log(dinoJson);
 
 //Get form element
 const formElem = document.getElementById('dino-compare');
 
-//Get form data
-formElem.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log("I'm alive! - formElem fired");
 
-    new FormData(formElem);
-});
-
-formElem.addEventListener('formdata', (e) => {
-    console.log('Hello there! - formdata fired');
-
-    let data = e.formData;
-    for (var value of data.values()) {
-        console.log(value);
-    }
-});
-
-//We are making dinosaurs
-function Dinosaur(array) {
+function Tilemaker(properties) {
     return {
-        array,
+        species : species,
+        weight : weight,
+        height : height,
+        diet : diet,
+        where : where,
+        when : when,
+        fact : fact
     };
 }
 
-const dino1 = Dinosaur(dinoJson);
-
+const dino1 = Tilemaker(dinoJson[0]);
 console.log(dino1);
+
+//Get form data
+// formElem.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log("I'm alive! - formElem fired");
+
+//     new FormData(formElem);
+// });
+
+// formElem.addEventListener('formdata', (e) => {
+//     console.log('Hello there! - formdata fired');
+
+//     let data = e.formData;
+//     for (var value of data.values()) {
+//         console.log(value);
+//     }
+// });
+
+//We are making dinosaurs
+// function Dinosaur(array) {
+//     return {
+//         array,
+//     };
+// }
+
+// const dino1 = Dinosaur(dinoJson);
+
+// console.log(dino1);
+
