@@ -34,9 +34,8 @@
 //  My code -
 
 // Dino array
-const dinoJson =
-{
-    "Dinos": [
+const dinoJson = 
+    [
         {
             "species": "Triceratops",
             "weight": 13000,
@@ -110,8 +109,7 @@ const dinoJson =
             "fact": "All birds are living dinosaurs."
         }
     ]
-}
-// console.log(dinoJson);
+console.log(dinoJson);
 
 //Get form element
 const formElem = document.getElementById('dino-compare');
@@ -119,13 +117,13 @@ const formElem = document.getElementById('dino-compare');
 
 function Tilemaker(properties) {
     return {
-        species : species,
-        weight : weight,
-        height : height,
-        diet : diet,
-        where : where,
-        when : when,
-        fact : fact
+        species : properties.species,
+        weight : properties.weight,
+        height : properties.height,
+        diet : properties.diet,
+        where : properties.where,
+        when : properties.when,
+        fact : properties.fact
     };
 }
 
