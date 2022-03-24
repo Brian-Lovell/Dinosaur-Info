@@ -157,14 +157,15 @@ formElem.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log("I'm alive! - formElem fired");
 
-    new FormData(formElem);
+    const human1 = Tilemaker(formElem);
+    console.log(human1);
 });
 
-formElem.addEventListener('formdata', (e) => {
-    console.log('Hello there! - formdata fired');
+// formElem.addEventListener('formdata', (e) => {
+//     console.log('Hello there! - formdata fired');
 
-    let data = e.formData;
-    for (var value of data.values()) {
-        console.log(value);
-    }
-});
+//     let data = e.formData;
+//     for (var value of data.values()) {
+//         console.log(value);
+//     }
+// });
