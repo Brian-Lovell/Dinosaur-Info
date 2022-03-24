@@ -114,7 +114,7 @@ console.log(dinoJson);
 //Get form element
 const formElem = document.getElementById('dino-compare');
 
-
+// Factory Function
 function Tilemaker(properties) {
     return {
         species : properties.species,
@@ -127,34 +127,44 @@ function Tilemaker(properties) {
     };
 }
 
+// We create Dinosaurs
 const dino1 = Tilemaker(dinoJson[0]);
 console.log(dino1);
 
+const dino2 = Tilemaker(dinoJson[1]);
+console.log(dino2);
+
+const dino3 = Tilemaker(dinoJson[2]);
+console.log(dino3);
+
+const dino4 = Tilemaker(dinoJson[3]);
+console.log(dino4);
+
+const dino5 = Tilemaker(dinoJson[4]);
+console.log(dino5);
+
+const dino6 = Tilemaker(dinoJson[5]);
+console.log(dino6);
+
+const dino7 = Tilemaker(dinoJson[6]);
+console.log(dino7);
+
+const dino8 = Tilemaker(dinoJson[7]);
+console.log(dino8);
+
 //Get form data
-// formElem.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     console.log("I'm alive! - formElem fired");
+formElem.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("I'm alive! - formElem fired");
 
-//     new FormData(formElem);
-// });
+    new FormData(formElem);
+});
 
-// formElem.addEventListener('formdata', (e) => {
-//     console.log('Hello there! - formdata fired');
+formElem.addEventListener('formdata', (e) => {
+    console.log('Hello there! - formdata fired');
 
-//     let data = e.formData;
-//     for (var value of data.values()) {
-//         console.log(value);
-//     }
-// });
-
-//We are making dinosaurs
-// function Dinosaur(array) {
-//     return {
-//         array,
-//     };
-// }
-
-// const dino1 = Dinosaur(dinoJson);
-
-// console.log(dino1);
-
+    let data = e.formData;
+    for (var value of data.values()) {
+        console.log(value);
+    }
+});
