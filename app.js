@@ -152,6 +152,17 @@ console.log(dino7);
 const dino8 = Tilemaker(dinoJson[7]);
 console.log(dino8);
 
+const dinosArray = [
+    dino1,
+    dino2,
+    dino3,
+    dino4,
+    dino5,
+    dino6,
+    dino7,
+    dino8
+]
+
 //Get form data
 formElement.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -187,7 +198,7 @@ formElement.addEventListener('submit', (e) => {
     console.log(human1);
     })
 
-function createGrid() {
+function createGrid(dinosArray) {
     // Access  main id grid
     const mainGrid = document.getElementById('grid');
 
