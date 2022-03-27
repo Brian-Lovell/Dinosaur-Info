@@ -88,7 +88,8 @@ function Tilemaker(properties) {
         diet : properties.diet,
         where : properties.where,
         when : properties.when,
-        fact : properties.fact
+        fact : properties.fact,
+        info1 : factFinder() 
     };
 }
 
@@ -151,7 +152,7 @@ formElement.addEventListener('submit', (e) => {
     let formArray = 
     [
         {
-            species : 'human',
+            species : 'Human',
             fact : formSpecies,
             height : formHeightFeet,
             weight : formWeight,
@@ -206,4 +207,8 @@ function createGrid(array1) {
 
 function removeForm () {
     formElement.innerHTML = '';
+}
+
+function factFinder() {
+    return this.fact
 }
