@@ -198,10 +198,10 @@ formElement.addEventListener('submit', (e) => {
     console.log(human1);
     })
 
-function createGrid(dinosArray) {
+function createGrid(array1) {
 
-    for (let i = 0; i < dinosArray.length; i++) {
-            // Access  main id grid
+    for (let i = 0; i < array1.length; i++) {
+        // Access  main id grid
         const mainGrid = document.getElementById('grid');
 
         // Create Tile class grid-item
@@ -224,3 +224,4 @@ function createGrid(dinosArray) {
     }
 }
 
+createGrid(dinosArray);
