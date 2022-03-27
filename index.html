@@ -25,10 +25,10 @@
             <p>Name:</p>
             <input id="species" class="form-field__full" type="text" name="name">
             <p>Height</p>
-            <label>Feet: <input id="feet" class="form-field__short" type="number" name="feet"></label>
-            <label>inches: <input id="inches" class="form-field__short" type="number" name="inches"></label>
+            <label>Feet: <input id="feet" class="form-field__short" type="number" min="0" name="feet"></label>
+            <label>inches: <input id="inches" class="form-field__short" type="number" max="11" min="0" name="inches"></label>
             <p>Weight:</p>
-            <label><input id="weight" class="form-field__full" type="number" name="weight">lbs</label>
+            <label><input id="weight" class="form-field__full" type="number" min="0" name="weight">lbs</label>
             <p>Diet:</p>
             <select id="diet" class="form-field__full" name="diet">
                 <option>Herbavore</option>
