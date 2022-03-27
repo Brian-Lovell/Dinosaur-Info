@@ -204,5 +204,6 @@ gridItem.appendChild(headerThree);
 gridItem.appendChild(image);
 gridItem.appendChild(paragraph);
 
-image.src = ".\images\human.png"
+const imagePath = '/images/human.png'
 
+image.src = imagePath;
