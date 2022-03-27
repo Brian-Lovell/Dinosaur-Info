@@ -196,6 +196,10 @@ formElement.addEventListener('submit', (e) => {
 
     const human1 = Tilemaker(formArray[0]);
     console.log(human1);
+
+    dinosArray.push(human1);
+
+    createGrid(dinosArray);
     })
 
 function createGrid(array1) {
@@ -204,24 +208,24 @@ function createGrid(array1) {
         // Access  main id grid
         const mainGrid = document.getElementById('grid');
 
-        // Create Tile class grid-item
+        // Create Elements
         const gridItem = document.createElement('div');
-        gridItem.className = 'grid-item';
-        mainGrid.appendChild(gridItem);
-
-        // Create elements h3 img and p
         const headerThree = document.createElement('h3');
         const image = document.createElement('img');
         const paragraph = document.createElement('p');
 
+        // Add image path
+        const imagePath = '/images/' + array1[i].species + '.png';
+        image.src = imagePath;
+
+        // Add class Name
+        gridItem.className = 'grid-item';
+
+        // Append html elements
+        mainGrid.appendChild(gridItem);
         gridItem.appendChild(headerThree);
         gridItem.appendChild(image);
         gridItem.appendChild(paragraph);
 
-        const imagePath = '/images/human.png'
-
-        image.src = imagePath;
     }
 }
-
-createGrid(dinosArray);
