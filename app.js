@@ -89,7 +89,9 @@ function Tilemaker(properties) {
         where : properties.where,
         when : properties.when,
         fact : properties.fact,
-        info1 : factFinder() 
+        info1 : function() {
+            return this.fact;
+        }
     };
 }
 
@@ -196,6 +198,9 @@ function createGrid(array1) {
         // Add to h3
         headerThree.innerHTML = array1[i].species;
 
+        // Add to p
+        paragraph.innerHTML = array1[i].info1();
+
         // Append html elements
         mainGrid.appendChild(gridItem);
         gridItem.appendChild(headerThree);
@@ -207,8 +212,4 @@ function createGrid(array1) {
 
 function removeForm () {
     formElement.innerHTML = '';
-}
-
-function factFinder() {
-    return this.fact
 }
