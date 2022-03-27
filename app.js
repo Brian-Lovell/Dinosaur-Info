@@ -94,7 +94,9 @@ function Tilemaker(properties) {
             if (this.species == 'Human') {
                 return 'You: ' + this.fact;
             }
-
+            if (this.species == 'Pigeon') {
+                return 'Fact: ' + this.fact;
+            }
             if (factChooser == 0) {
                 return 'Fact: '+ this.fact;
             }
@@ -104,7 +106,7 @@ function Tilemaker(properties) {
             if (factChooser == 2) {
                 return 'When: ' + this.when + ' Where: ' + this.where;
             }
-            if (factChoose ==3) {
+            if (factChoose == 3) {
                 return 'Weight: ' + this.weight;
             }
         }
