@@ -187,23 +187,26 @@ formElement.addEventListener('submit', (e) => {
     console.log(human1);
     })
 
-// Access  main id grid
-const mainGrid = document.getElementById('grid');
+function createGrid() {
+    // Access  main id grid
+    const mainGrid = document.getElementById('grid');
 
-// Create Tile class grid-item
-const gridItem = document.createElement('div');
-gridItem.className = 'grid-item';
-mainGrid.appendChild(gridItem);
+    // Create Tile class grid-item
+    const gridItem = document.createElement('div');
+    gridItem.className = 'grid-item';
+    mainGrid.appendChild(gridItem);
 
-// Create elements h3 img and p
-const headerThree = document.createElement('h3');
-const image = document.createElement('img');
-const paragraph = document.createElement('p');
+    // Create elements h3 img and p
+    const headerThree = document.createElement('h3');
+    const image = document.createElement('img');
+    const paragraph = document.createElement('p');
 
-gridItem.appendChild(headerThree);
-gridItem.appendChild(image);
-gridItem.appendChild(paragraph);
+    gridItem.appendChild(headerThree);
+    gridItem.appendChild(image);
+    gridItem.appendChild(paragraph);
 
-const imagePath = '/images/human.png'
+    const imagePath = '/images/human.png'
 
-image.src = imagePath;
+    image.src = imagePath;
+}
+
