@@ -58,7 +58,7 @@ p {
 
 .grid-item:nth-child(2){
     background: #dc7657f5;
-    order: 2;
+    order: 9;
 }
 
 .grid-item:nth-child(3){
@@ -88,7 +88,7 @@ p {
 
 .grid-item:nth-child(8){
     background: #9fc376f9;
-    order: 9;
+    order: 2;
 }
 
 .grid-item:nth-child(9){
