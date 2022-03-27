@@ -90,7 +90,19 @@ function Tilemaker(properties) {
         when : properties.when,
         fact : properties.fact,
         info1 : function() {
-            return this.fact;
+            const factChooser = Math.floor(Math.random() * 3);
+            if (factChooser == 0) {
+                return 'Fact: '+ this.fact;
+            }
+            if (factChooser == 1) {
+                return 'Diet: ' + this.diet;
+            }
+            if (factChooser == 2) {
+                return 'When: ' + this.when + ' Where: ' + this.where;
+            }
+            if (factChoose ==3) {
+                return 'Weight: ' + this.weight;
+            }
         }
     };
 }
