@@ -186,7 +186,8 @@ formElement.addEventListener('submit', (e) => {
     let formArray = 
     [
         {
-            species : formSpecies,
+            species : 'human',
+            fact : formSpecies,
             height : formHeightFeet,
             weight : formWeight,
             diet : formDiet
