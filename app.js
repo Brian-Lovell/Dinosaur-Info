@@ -222,6 +222,9 @@ function createGrid(array1) {
         // Add class Name
         gridItem.className = 'grid-item';
 
+        // Add unique Id
+        gridItem.id = array1[i].species;
+
         // Append html elements
         mainGrid.appendChild(gridItem);
         gridItem.appendChild(headerThree);
