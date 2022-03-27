@@ -112,7 +112,7 @@ const dinoJson =
 console.log(dinoJson);
 
 //Get form element
-const formElem = document.getElementById('dino-compare');
+const formElemement = document.getElementById('dino-compare');
 
 // Factory Function
 function Tilemaker(properties) {
@@ -153,25 +153,7 @@ const dino8 = Tilemaker(dinoJson[7]);
 console.log(dino8);
 
 //Get form data
-formElem.addEventListener('submit', (e) => {
+formElemement.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log("I'm alive! - formElem fired");
-
-    new FormData(formElem);
-    // console.log(formData);
-
-    // const human1 = Tilemaker(formData);
-    // console.log(human1);
-
-});
-
-formElem.addEventListener('formdata', (e) => {
-    console.log('Hello there! - formdata fired');
-
-    let data = e.formData;
-    for (var value of data.values()) {
-        console.log(value);
-    }
-    const human1 = Tilemaker(data.values);
-    console.log(human1);
 });
