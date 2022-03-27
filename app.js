@@ -171,4 +171,18 @@ formElement.addEventListener('submit', (e) => {
 
     let formDiet = document.getElementById('diet').value;
     console.log(formDiet);
+
+    let formArray = 
+    [
+        {
+            species : formSpecies,
+            height : formHeightFeet,
+            weight : formWeight,
+            diet : formDiet
+        }
+    ]
+    console.log(formArray);
+
+    const human1 = Tilemaker(formArray[0]);
+    console.log(human1);
     })
