@@ -186,3 +186,23 @@ formElement.addEventListener('submit', (e) => {
     const human1 = Tilemaker(formArray[0]);
     console.log(human1);
     })
+
+// Access  main id grid
+const mainGrid = document.getElementById('grid');
+
+// Create Tile class grid-item
+const gridItem = document.createElement('div');
+gridItem.className = 'grid-item';
+mainGrid.appendChild(gridItem);
+
+// Create elements h3 img and p
+const headerThree = document.createElement('h3');
+const image = document.createElement('img');
+const paragraph = document.createElement('p');
+
+gridItem.appendChild(headerThree);
+gridItem.appendChild(image);
+gridItem.appendChild(paragraph);
+
+image.src = ".\images\human.png"
+
