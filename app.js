@@ -199,25 +199,28 @@ formElement.addEventListener('submit', (e) => {
     })
 
 function createGrid(dinosArray) {
-    // Access  main id grid
-    const mainGrid = document.getElementById('grid');
 
-    // Create Tile class grid-item
-    const gridItem = document.createElement('div');
-    gridItem.className = 'grid-item';
-    mainGrid.appendChild(gridItem);
+    for (let i = 0; i < dinosArray.length; i++) {
+            // Access  main id grid
+        const mainGrid = document.getElementById('grid');
 
-    // Create elements h3 img and p
-    const headerThree = document.createElement('h3');
-    const image = document.createElement('img');
-    const paragraph = document.createElement('p');
+        // Create Tile class grid-item
+        const gridItem = document.createElement('div');
+        gridItem.className = 'grid-item';
+        mainGrid.appendChild(gridItem);
 
-    gridItem.appendChild(headerThree);
-    gridItem.appendChild(image);
-    gridItem.appendChild(paragraph);
+        // Create elements h3 img and p
+        const headerThree = document.createElement('h3');
+        const image = document.createElement('img');
+        const paragraph = document.createElement('p');
 
-    const imagePath = '/images/human.png'
+        gridItem.appendChild(headerThree);
+        gridItem.appendChild(image);
+        gridItem.appendChild(paragraph);
 
-    image.src = imagePath;
+        const imagePath = '/images/human.png'
+
+        image.src = imagePath;
+    }
 }
 
