@@ -106,7 +106,7 @@ function Tilemaker(properties) {
             if (factChooser == 2) {
                 return 'When: ' + this.when + ' Where: ' + this.where;
             }
-            if (factChoose == 3) {
+            if (factChooser == 3) {
                 return 'Weight: ' + this.weight;
             }
         }
