@@ -74,7 +74,6 @@ const dinoJson =
             "fact": "All birds are living dinosaurs."
         }
     ]
-console.log(dinoJson);
 
 //Get form element
 const formElement = document.getElementById('dino-compare');
@@ -91,6 +90,11 @@ function Tilemaker(properties) {
         fact : properties.fact,
         info1 : function() {
             const factChooser = Math.floor(Math.random() * 3);
+            
+            if (this.species == 'Human') {
+                return 'You: ' + this.fact;
+            }
+
             if (factChooser == 0) {
                 return 'Fact: '+ this.fact;
             }
@@ -109,28 +113,20 @@ function Tilemaker(properties) {
 
 // We create Dinosaurs
 const dino1 = Tilemaker(dinoJson[0]);
-console.log(dino1);
 
 const dino2 = Tilemaker(dinoJson[1]);
-console.log(dino2);
 
 const dino3 = Tilemaker(dinoJson[2]);
-console.log(dino3);
 
 const dino4 = Tilemaker(dinoJson[3]);
-console.log(dino4);
 
 const dino5 = Tilemaker(dinoJson[4]);
-console.log(dino5);
 
 const dino6 = Tilemaker(dinoJson[5]);
-console.log(dino6);
 
 const dino7 = Tilemaker(dinoJson[6]);
-console.log(dino7);
 
 const dino8 = Tilemaker(dinoJson[7]);
-console.log(dino8);
 
 const dinosArray = [
     dino1,
@@ -146,22 +142,16 @@ const dinosArray = [
 //Get form data
 formElement.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log("I'm alive! - formElem fired");
 
     let formSpecies = document.getElementById('species').value;
-    console.log(formSpecies);
 
     let formHeightFeet = document.getElementById('feet').value;
-    console.log(formHeightFeet);
 
     let formHeightInches = document.getElementById('inches').value;
-    console.log(formHeightInches);
 
     let formWeight = document.getElementById('weight').value;
-    console.log(formWeight);
 
     let formDiet = document.getElementById('diet').value;
-    console.log(formDiet);
 
     let formArray = 
     [
@@ -173,10 +163,8 @@ formElement.addEventListener('submit', (e) => {
             diet : formDiet
         }
     ]
-    console.log(formArray);
 
     const human1 = Tilemaker(formArray[0]);
-    console.log(human1);
 
     dinosArray.push(human1);
 
