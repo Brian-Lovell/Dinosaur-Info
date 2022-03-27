@@ -159,4 +159,16 @@ formElement.addEventListener('submit', (e) => {
 
     let formSpecies = document.getElementById('species').value;
     console.log(formSpecies);
-});
+
+    let formHeightFeet = document.getElementById('feet').value;
+    console.log(formHeightFeet);
+
+    let formHeightInches = document.getElementById('inches').value;
+    console.log(formHeightInches);
+
+    let formWeight = document.getElementById('weight').value;
+    console.log(formWeight);
+
+    let formDiet = document.getElementById('diet').value;
+    console.log(formDiet);
+    })
