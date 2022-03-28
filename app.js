@@ -119,33 +119,6 @@ for (let i = 0; i < dinoJson.length; i++) {
     dinosArray[i] = Tilemaker(dinoJson[i]);
 }
 
-// const dino1 = Tilemaker(dinoJson[0]);
-
-// const dino2 = Tilemaker(dinoJson[1]);
-
-// const dino3 = Tilemaker(dinoJson[2]);
-
-// const dino4 = Tilemaker(dinoJson[3]);
-
-// const dino5 = Tilemaker(dinoJson[4]);
-
-// const dino6 = Tilemaker(dinoJson[5]);
-
-// const dino7 = Tilemaker(dinoJson[6]);
-
-// const dino8 = Tilemaker(dinoJson[7]);
-
-// const dinosArray = [
-//     dino1,
-//     dino2,
-//     dino3,
-//     dino4,
-//     dino5,
-//     dino6,
-//     dino7,
-//     dino8
-// ]
-
 //Get form data
 formElement.addEventListener('submit', (e) => {
     e.preventDefault();
