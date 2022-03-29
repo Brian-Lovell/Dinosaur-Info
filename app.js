@@ -89,10 +89,10 @@ function Tilemaker (properties) {
     when: properties.when,
     fact: properties.fact,
     info1: function () {
-      const factChooser = Math.floor(Math.random() * 3)
+      const factChooser = Math.floor(Math.random() * 5)
 
       if (this.species === 'Human') {
-        return 'You: ' + this.fact
+        return this.fact
       }
       if (this.species === 'Pigeon') {
         return 'Fact: ' + this.fact
@@ -107,7 +107,13 @@ function Tilemaker (properties) {
         return 'When: ' + this.when + ' Where: ' + this.where
       }
       if (factChooser === 3) {
-        return 'Weight: ' + this.weight
+        return 'Weight: ' + this.weight + ' vs you: ' + human1.weight
+      }
+      if (factChooser === 4) {
+        return 'Weight: ' + this.diet + ' vs you: ' + human1.diet
+      }
+      if (factChooser === 5) {
+        return 'Weight: ' + this.height + ' vs you: ' + human1.height
       }
     }
   }
