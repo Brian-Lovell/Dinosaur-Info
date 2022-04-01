@@ -78,6 +78,12 @@ const dinoJson =
 // Get form element
 const formElement = document.getElementById('dino-compare')
 
+// We create Dinosaurs
+const dinosArray = []
+for (let i = 0; i < dinoJson.length; i++) {
+  dinosArray[i] = Tilemaker(dinoJson[i])
+}
+
 // Factory Function
 function Tilemaker (properties) {
   return {
@@ -88,8 +94,8 @@ function Tilemaker (properties) {
     where: properties.where,
     when: properties.when,
     fact: properties.fact,
-    info1: function () {
-      const factChooser = Math.floor(Math.random() * 5)
+    info1: function (object) {
+      const factChooser = Math.floor(Math.random() * 2)
 
       if (this.species === 'Human') {
         return this.fact
@@ -107,22 +113,16 @@ function Tilemaker (properties) {
         return 'When: ' + this.when + ' Where: ' + this.where
       }
       if (factChooser === 3) {
-        return 'Weight: ' + this.weight + ' vs you: ' + human1.weight
+        return 'Weight: ' + this.weight + ' vs you: ' + object.weight
       }
       if (factChooser === 4) {
-        return 'Weight: ' + this.diet + ' vs you: ' + human1.diet
+        return 'Weight: ' + this.diet + ' vs you: ' + object.diet
       }
       if (factChooser === 5) {
-        return 'Weight: ' + this.height + ' vs you: ' + human1.height
+        return 'Weight: ' + this.height + ' vs you: ' + object.height
       }
     }
   }
-}
-
-// We create Dinosaurs
-const dinosArray = []
-for (let i = 0; i < dinoJson.length; i++) {
-  dinosArray[i] = Tilemaker(dinoJson[i])
 }
 
 // Get form data
@@ -156,10 +156,10 @@ formElement.addEventListener('submit', (e) => {
 
   removeForm()
 
-  createGrid(dinosArray)
+  createGrid(dinosArray, human1)
 })
 
-function createGrid (array1) {
+function createGrid (array1, object) {
   for (let i = 0; i < array1.length; i++) {
     // Access  main id grid
     const mainGrid = document.getElementById('grid')
@@ -184,7 +184,7 @@ function createGrid (array1) {
     headerThree.innerHTML = array1[i].species
 
     // Add to p
-    paragraph.innerHTML = array1[i].info1()
+    paragraph.innerHTML = array1[i].info1(object)
 
     // Append html elements
     mainGrid.appendChild(gridItem)
