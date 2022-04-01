@@ -116,10 +116,10 @@ function Tilemaker (properties) {
         return 'Weight: ' + this.weight + 'lbs vs you: ' + object.weight + 'lbs!'
       }
       if (factChooser === 4) {
-        return 'Weight: ' + this.diet + ' vs you: ' + object.diet
+        return 'Diet: ' + this.diet + ' vs you: ' + object.diet
       }
       if (factChooser === 5) {
-        return 'Weight: ' + this.height + ' vs you: ' + object.height
+        return 'Height: ' + this.height + 'inches vs you: ' + object.height + 'inches!'
       }
     }
   }
