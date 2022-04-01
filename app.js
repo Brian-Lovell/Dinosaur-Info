@@ -95,7 +95,7 @@ function Tilemaker (properties) {
     when: properties.when,
     fact: properties.fact,
     info1: function (object) {
-      const factChooser = Math.floor(Math.random() * 2)
+      const factChooser = Math.floor(Math.random() * 5)
 
       if (this.species === 'Human') {
         return this.fact
@@ -113,7 +113,7 @@ function Tilemaker (properties) {
         return 'When: ' + this.when + ' Where: ' + this.where
       }
       if (factChooser === 3) {
-        return 'Weight: ' + this.weight + ' vs you: ' + object.weight
+        return 'Weight: ' + this.weight + 'lbs vs you: ' + object.weight + 'lbs!'
       }
       if (factChooser === 4) {
         return 'Weight: ' + this.diet + ' vs you: ' + object.diet
@@ -139,12 +139,14 @@ formElement.addEventListener('submit', (e) => {
 
   const formDiet = document.getElementById('diet').value
 
+  const formHeightTotal = (formHeightFeet / 12) + (formHeightInches)
+
   const formArray =
     [
       {
         species: 'Human',
         fact: formSpecies,
-        height: formHeightFeet,
+        height: formHeightTotal,
         weight: formWeight,
         diet: formDiet
       }
